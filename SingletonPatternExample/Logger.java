@@ -14,4 +14,10 @@ class Logger {
   public void log(MessageType type, String message) {
     System.out.println(type + " " + message);
   }
+
+  enum MessageType {
+    INFO,
+    WARN,
+    ERROR,
+  }
 }
