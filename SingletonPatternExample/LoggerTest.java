@@ -8,8 +8,6 @@ class LoggerTest {
 
     if (logger1 == logger2) {
       System.out.println("Same instance of Logger is obtained for both the loggers");
-      System.out.println("Memory address of logger1 " + logger1.hashCode());
-      System.out.println("Memory address of logger2 " + logger2.hashCode());
     } else {
       System.out.println("Different instances of Logger is obtained for both the loggers");
     }
