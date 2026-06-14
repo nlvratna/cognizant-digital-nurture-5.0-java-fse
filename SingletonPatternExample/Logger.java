@@ -1,11 +1,17 @@
 class Logger {
-  private static Logger instance;
+  // make sure a thread reads the latest info using the volatile keyword
+  private static volatile Logger instance;
 
   private Logger() {}
 
+  // using double check locking for thread safety
   public static Logger getInstance() {
     if (instance == null) {
-      instance = new Logger();
+      synchronized (Logger.class) {
+        if (instance == null) {
+          instance = new Logger();
+        }
+      }
     }
 
     return instance;
