@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cognizant-deep-skilling</groupId>
-    <artifactId>setup-junit</artifactId>
+    <artifactId>assertions</artifactId>
     <version>1.0</version>
 
     <dependencies>
