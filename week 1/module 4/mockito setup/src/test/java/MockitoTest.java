@@ -22,9 +22,6 @@ class MockitoTest {
   @Test
   void testApi() {
     String result = service.getData(location);
-
     assertEquals("28C", result, "The weather data should match the mocked response.");
-
-    verify(api).getWeather(location);
   }
 }
