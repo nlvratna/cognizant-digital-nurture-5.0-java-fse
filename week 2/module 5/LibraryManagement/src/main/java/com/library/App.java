@@ -1,13 +1,14 @@
 package com.library;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext appContext = new ClassPathXmlApplicationContext("appContext.xml");
+
+        BookService bookService = appContext.getBean(BookService.class);
+        bookService.ping();
     }
 }

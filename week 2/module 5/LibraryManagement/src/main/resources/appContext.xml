@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="book-service" class="com.library.BookService">
-        <constructor-arg name="bookRepo" ref="bookRepo"/>
+        <constructor-arg name="bookRepo" ref="book-repo"/>
     </bean>
 
     <bean id="book-repo" class="com.library.BookRepository">
