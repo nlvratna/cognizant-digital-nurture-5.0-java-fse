@@ -4,10 +4,11 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookService" class="com.library.BookService">
+    <bean id="book-service" class="com.library.BookService">
+        <constructor-arg name="bookRepo" ref="bookRepo"/>
     </bean>
 
-    <bean id="bookRepo" class="com.library.BookRepository">
+    <bean id="book-repo" class="com.library.BookRepository">
     </bean>
 
 </beans>
