@@ -1,0 +1,22 @@
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.img-block {
+  display: block;
+}
+
+.office {
+  margin: 20px auto;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-context: center;
+  flex-direction: column;
+}
