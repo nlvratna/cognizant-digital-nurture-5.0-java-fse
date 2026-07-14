@@ -7,7 +7,7 @@ function App() {
         Name={"Steve"}
         School={"DNV Public School"}
         total={284}
-        goal={3}
+        goal={4}
       />
     </div>
   );
