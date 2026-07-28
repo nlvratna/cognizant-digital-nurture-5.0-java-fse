@@ -1,0 +1,16 @@
+.ng-invalid.ng-touched {
+  border: 1px solid red;
+  outline: none;
+}
+
+.ng-valid.ng-touched {
+  border: 1px solid green;
+  outline: none;
+}
+
+input,
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

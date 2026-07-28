@@ -1,0 +1,8 @@
+<h2>Welcome to {{ portalName }}</h2>
+
+<div style="margin-bottom: 20px; padding: 10px; background: #f4f4f4">
+  <strong>Auth Status:</strong> {{ authService.isLoggedIn() ? 'Logged In' : 'Logged Out' }}
+  <br /><br />
+  <button (click)="authService.login()" *ngIf="!authService.isLoggedIn()">Simulate Login</button>
+  <button (click)="authService.logout()" *ngIf="authService.isLoggedIn()">Simulate Logout</button>
+</div>

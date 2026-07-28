@@ -1,0 +1,15 @@
+{
+  "courses": [
+    { "id": 1, "name": "Data Structures", "code": "cs101", "credits": 4, "gradeStatus": "passed" },
+    { "id": 2, "name": "Angular Basics", "code": "cs102", "credits": 3, "gradeStatus": "pending" },
+    { "id": 3, "name": "RxJS Masterclass", "code": "cs103", "credits": 3, "gradeStatus": "failed" },
+    {
+      "id": 4,
+      "name": "NgRx State Management",
+      "code": "cs104",
+      "credits": 4,
+      "gradeStatus": "pending"
+    },
+    { "id": 5, "name": "Algorithms", "code": "cs201", "credits": 4, "gradeStatus": "passed" }
+  ]
+}

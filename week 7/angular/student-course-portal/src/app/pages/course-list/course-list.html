@@ -1,0 +1,28 @@
+<h2>Available Courses</h2>
+
+<div *ngIf="errorMessage" style="background: #ffe6e6; color: #cc0000; padding: 15px; margin-bottom: 15px; border: 1px solid red; border-radius: 4px;">
+  <strong>Error:</strong> {{ errorMessage }}
+</div>
+
+<ng-container *ngIf="(courses$ | async) as loadedCourses; else loadingTemplate">
+
+  <div *ngIf="loadedCourses.length > 0; else noCourses">
+    <app-course-card
+      *ngFor="let c of loadedCourses; let i = index; trackBy: trackByCourseId"
+      [course]="c"
+      appHighlight="lightblue"
+      (enrollRequested)="onEnroll($event)">
+    </app-course-card>
+  </div>
+
+</ng-container>
+
+<ng-template #loadingTemplate>
+  <p style="color: blue; font-style: italic;">Fetching courses from server...</p>
+</ng-template>
+
+<ng-template #noCourses>
+  <p>No courses available.</p>
+</ng-template>
+
+<p *ngIf="selectedCourseId">Selected course ID: {{ selectedCourseId }}</p>
